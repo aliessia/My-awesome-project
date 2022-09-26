@@ -37,5 +37,6 @@
       left: 500px;
     }
     .info {
-      text-align: center;
+        text-align: center;
+        display: block;
     }
