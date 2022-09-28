@@ -32,12 +32,13 @@ let searchForm = document.querySelector("button");
 searchForm.addEventListener("click", submitBtn);
 
 function showTemperature(response) {
-  let temperature = Math.round(response.data.main.temp);
-  let temperatureunit = document.querySelector("#number");
-  temperatureunit.innerHTML = `${temperature}`;
-  let inputcity = document.querySelector("#current-city");
-  let h2 = document.querySelector("h2");
-  h2.innerHTML = response.data.name;
+  let temperatureElement = document.querySelector("#temperature-number");
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  celsiusTemperature =response.data.main.temp;
+  let cityElement = document.querySelector("#city");
+  cityElement.innerHTML = response.data.name;
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
   let humidity = response.data.main.humidity;
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = `Humidity: ${humidity}%`;
@@ -57,5 +58,25 @@ function retrievePosition(position) {
 function gocurrentButton() {
   navigator.geolocation.getCurrentPosition(retrievePosition);
 }
+function showFahrenheitTemperature(event) {
+  event.preventDefault();
+let temperatureElement = document.querySelector("#temperature-number");
+let fahrenheitTemperature = (celsiusTemperature * 9)/5+32;
+temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+function showCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature-number");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
 let button = document.querySelector("#current-location");
 button.addEventListener("click", gocurrentButton);
+
+let celsiusTemperature = null;
+
+let fahrenheitlink = document.querySelector("#fahrenheit-link");
+fahrenheitlink.addEventListener ("click", showFahrenheitTemperature);
+
+let celsiuslink = document.querySelector("#celsius-link");
+celsiuslink.addEventListener ("click", showCelsiusTemperature);
