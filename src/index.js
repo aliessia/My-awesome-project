@@ -30,6 +30,7 @@ function search(city) {
 }
 let searchForm = document.querySelector("button");
 searchForm.addEventListener("click", submitBtn);
+
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let temperatureunit = document.querySelector("#number");
@@ -43,6 +44,8 @@ function showTemperature(response) {
   let feeling = Math.round(response.data.main.feels_like);
   let feelsElement = document.querySelector("#feels-like");
   feelsElement.innerHTML = `Feels like: ${feeling}°`;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 function retrievePosition(position) {
   let apiKey = "016941ffb8ff4863ebb702ba9639d53f";
