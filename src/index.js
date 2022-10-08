@@ -1,5 +1,5 @@
 let now = new Date();
-let h3 = document.querySelector("h3");
+let date = document.querySelector("#date");
 let hours = now.getHours();
 if(hours < 10){
   hours = `0${hours}`}
@@ -16,7 +16,7 @@ let days = [
   "Saturday",
 ];
 let day = days[now.getDay()];
-h3.innerHTML = `${day}, ${hours}:${minutes}`;
+date.innerHTML = `${day}, ${hours}:${minutes}`;
 function submitBtn(event) {
   event.preventDefault();
   let city = document.querySelector("#current-city").value;
@@ -42,9 +42,9 @@ function showTemperature(response) {
   let humidity = response.data.main.humidity;
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = `Humidity: ${humidity}%`;
-  let feeling = Math.round(response.data.main.feels_like);
-  let feelsElement = document.querySelector("#feels-like");
-  feelsElement.innerHTML = `Feels like: ${feeling}°`;
+  let wind = Math.round(response.data.wind.speed);
+  let windElement = document.querySelector("#wind");
+  windElement.innerHTML = `Wind: ${wind}km/h`;
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }

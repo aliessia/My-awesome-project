@@ -12,29 +12,54 @@
       font-family: "Mochiy Pop One", sans-serif;
       font-family: "Permanent Marker", cursive;
     }
-    img {
-      width: 100px;
-      display: block;
-      margin: 0 auto;
+    .Weather-info {
+    margin-top: 20px;
+  }
+  .temperature-container {
+    margin: 20px 0 10px;
+  }
+    h1 {
+      color: #272142;
+      font-size: 38px;
+      font-weight: 700;
+      line-height: 48px;
+      margin: 20px 0 10px;
     }
-    h1,
-    h2,
-    h3 {
-      text-align: center;
+    ul {
+      margin: 0 0 10px;
+      padding: 0;
     }
-    form {
-      text-align: center;
+    li {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+      list-style: none;
+      margin-bottom: 5px;
+    }
+    .temperature {
+      color: #212121;
+      font-size: 48px;
+      font-weight: 200;
+      line-height: 1;
+      margin-left: 15px;
+    }
+    .units {
+      color: #212121;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 1;
+      position: relative;
+      top: -26px;
+    }
+    .weather-icon {
+      height: 80px;
+      width: 60px;
+      margin: 10px 0;
     }
     .days {
       font-weight: 400;
       position: relative;
       left: 70px;
-    }
-    .more-data {
-      display: block;
-      position: relative;
-      top: -100px;
-      left: 500px;
     }
     .info {
         text-align: center;

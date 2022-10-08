@@ -23,28 +23,48 @@
   <body>
     <div class="container">
       <div class="weather-app">
-        <div>
-          <img src="images /image.jpeg" id="icon" alt="sunny" />
-        </div>
-        <h1>
-          <span class="temperature" id="temperature-number"> 37</span>
-          <span class="units" id="celsius"><a href="#" id="celsius-link">°C </a> | <a href="#" id="fahrenheit-link">°F</a></span>
-        </h1>
-        <h2 id="city">Kyiv</h2>
-        <h3>Sunday, 16:59</h3>
-        <h3 id="description">Sunny</h3>
-        <div></div>
         <form class="search" id="search-city">
-          <input type="city" id="current-city" placeholder="Enter your city" />
-          <button type="submit" class="btn btn-primary">Search</button>
-          <button type="button" class="btn btn-info" id="current-location">
-            Current location
-          </button>
-        </form>
-        <div class="more-data row">
-          <div class="col-6" id="humidity">Humidity 4%</div>
-          <div class="col-6" id="feels-like">Feels like 37°C</div>
+          <div class="row">
+            <div class="col-6">
+          <input type="search" id="current-city" placeholder="Type a city.." autofocus="on" autocomplete="off"  class="form-control shadow-sm"/>
         </div>
+        <div class="col-3">
+          <button type="submit" class="form-control btn btn-primary shadow-sm">Search</button>
+        </div>
+        <div class="col-3">
+          <button type="button" class="btn btn-success w-100" id="current-location">
+            My location
+          </button>
+        </div>
+        </form>
+      <div class="Weather-info">
+        <div class="row">
+          <div class="col-6"> 
+            <h1 id="city">Kyiv</h1>
+            <ul>
+              <li id="date">
+                Sunday, 16:59
+              </li>
+              <li id="humidity">
+                Humidity: 77%,     </li>
+               <li id="wind">  Wind: 8 km/h 
+              </li>
+            </ul>
+          </div>
+          <div class="col-6" class="temperature-container">
+              <img id="icon" src="https://openweathermap.org/img/wn/02d@2x.png" alt="Few clouds"
+              class="weather-icon" />
+                <span class="temperature" id="temperature-number">37</span><span class="units">
+                  <a href="#" id="celsius-link">C</a> |
+                  <a href="#" id="fahrenheit-link">F</a>
+            <ul>
+               <li id="description">
+              Few Clouds
+            </li>
+          </ul>
+            </div>
+        </div>
+      </div>
         <div class="days row">
           <div class="col-2">Mon</div>
           <div class="col-2">Tue</div>
@@ -60,6 +80,7 @@
           <div class="col-2">37°C</div>
         </div>
       </div>
+    </div>
       <small class="info"> <a href= "https://github.com/aliessia/My-awesome-project" target="_blank"> Open-source code</a> by Aliesia Soloviova</small>
     </div>
     <script src="src/index.js"></script>
