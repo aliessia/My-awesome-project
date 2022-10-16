@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="src/styles.css"/>
   </head>
   <body>
+ <div class="bg-image p-3">
     <div class="container">
       <div class="weather-app">
         <form class="search" id="search-form">
@@ -29,10 +30,10 @@
           <input type="search" id="current-city" placeholder="Type a city.." autofocus="on" autocomplete="off"  class="form-control shadow-sm"/>
         </div>
         <div class="col-3">
-          <button type="submit" class="form-control btn btn-primary shadow-sm">Search</button>
+          <button type="submit" class="form-control btn btn-dark shadow-sm">Search</button>
         </div>
         <div class="col-3">
-          <button type="button" class="btn btn-success w-100" id="current-location">
+          <button type="button" class="btn btn-dark w-100" id="current-location">
             My location
           </button>
         </div>
@@ -43,7 +44,7 @@
             <h1 id="city">Kyiv</h1>
             <ul>
               <li id="date">
-                Sunday, 16:59
+                Sunday | 16:59
               </li>
               <li id="humidity">
                 Humidity: 77%,     </li>
@@ -55,7 +56,7 @@
               <img id="icon" src="https://openweathermap.org/img/wn/02d@2x.png" alt="Few clouds"
               class="weather-icon" />
                 <span class="temperature" id="temperature-number">37</span><span class="units">
-                  <a href="#" id="celsius-link">°  C</a> |
+                  <a href="#" id="celsius-link" class="active">°  C</a> 
                   <a href="#" id="fahrenheit-link">°  F</a>
             <ul>
                <li id="description">
@@ -70,6 +71,7 @@
     </div>
       <small class="info"> <a href= "https://github.com/aliessia/My-awesome-project" target="_blank"> Open-source code</a> by Aliesia Soloviova</small>
     </div>
+  </div>
     <script src="src/index.js"></script>
   </body>
 </html>

@@ -1,3 +1,7 @@
+    body {
+      background-image: url(image/city.png);
+      background-color: black;
+    }
     .container {
       max-width: 700px;
     }
@@ -11,6 +15,7 @@
       box-shadow: 7px 5px 5px -2px rgb(0 0 0 / 23%);
       font-family: "Mochiy Pop One", sans-serif;
       font-family: "Permanent Marker", cursive;
+      background: #FFD300;
     }
     .Weather-info {
     margin-top: 20px;
@@ -49,6 +54,13 @@
       position: relative;
       top: -26px;
     }
+
+  .active {
+      color: #212121;
+      cursor: default;
+      text-decoration: none;
+      text-decoration-line: none;
+    }
     .weather-icon {
       height: 70px;
       width: 70px;
@@ -62,9 +74,18 @@
       font-size: 16px;
     }
     .info {
-        text-align: center;
-        display: block;
+      background-color: #FFD300;
+      text-align: center;
+      display: block;
+      border: 0.5px solid #2e2c4c;
+      border-radius: 20px;
+      padding: 15px;
+      margin: 10px;
+      font-family: "Noto Sans JP", sans-serif;
+      color: #2e2c4c;
+      box-shadow: 7px 5px 5px -2px rgb(0 0 0 / 23%);
+      font-family: "Mochiy Pop One", sans-serif;
+      font-family: "Permanent Marker", cursive;
     }
-    a {
-      text-decoration-line: none;
-    }
+  
+ 
